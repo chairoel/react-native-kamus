@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Text, StatusBar, TouchableOpacity} from 'react-native';
+import {View, Text, StatusBar, TouchableOpacity, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 function DetailScreen({navigation, route}) {
@@ -32,6 +32,14 @@ function DetailScreen({navigation, route}) {
           </View>
         </View>
       </View>
+
+      <Image
+        source={{uri: item.foto}}
+        style={{
+          // width: 50,
+          height: 200,
+        }}
+      />
 
       <View
         style={{

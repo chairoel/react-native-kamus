@@ -102,13 +102,25 @@ function HomeScreen({navigation}) {
               paddingVertical: 10,
               borderRadius: 6,
               elevation: 3,
-              paddingLeft: 20,
+              paddingLeft: 10,
             }}
             onPress={() => navigation.navigate('DetailScreen', {item: item})}>
-            <Text style={{fontSize: 14, fontWeight: 'bold'}}>
-              {item.indonesia}
-            </Text>
-            <Text style={{fontSize: 14}}>{item.english}</Text>
+            <View style={{flexDirection: 'row'}}>
+              <Image
+                source={{uri: item.foto}}
+                style={{
+                  width: 50,
+                  height: 50,
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: 6,
+                }}
+              />
+
+              <View style={{flex: 1, marginLeft: 10}}>
+                <Text style={{fontWeight: 'bold'}}>{item.indonesia}</Text>
+                <Text>{item.english}</Text>
+              </View>
+            </View>
           </TouchableOpacity>
         )}
       />
